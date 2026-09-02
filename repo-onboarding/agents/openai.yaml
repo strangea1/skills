@@ -1,0 +1,16 @@
+interface:
+  display_name: "Repository Onboarding"
+  short_description: "Build a concise, verified repository map"
+  default_prompt: "Use $repo-onboarding to create a concise agent-oriented map of this repository."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "oraios/serena"
+      description: "Serena semantic code navigation and language-server analysis"
+    - type: "mcp"
+      value: "repomap"
+      description: "Tree-sitter repository mapping and PageRank-based discovery"
+
+policy:
+  allow_implicit_invocation: true
